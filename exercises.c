@@ -40,7 +40,7 @@ void sumaNultimos(int a[], int n, int m, int * suma)
    int entero = sumaN(a,n);
    int diferencia = sumaN(a,n-m);
    *suma=entero-diferencia; 
-}  // ./test.sh
+} // ./test.sh
 
 /*
 Ejercicio 3.
@@ -78,7 +78,9 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+   Vector* memoria=(Vector*)malloc(sizeof(Vector));
+   //*datos le asigno n
+   return memoria;
 }
 
 /*
