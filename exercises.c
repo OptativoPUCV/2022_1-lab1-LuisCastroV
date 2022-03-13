@@ -18,6 +18,7 @@ void suma(int a, int b, int * c) {
 /*
 Esta función suma los N primeros números del arreglo a
 */
+
 int sumaN(int a[], int N) {
     int i;
     int tot = 0;
@@ -26,20 +27,20 @@ int sumaN(int a[], int N) {
     }
     return tot;
 }
+
 /*
 Ejercicio 2.
 Esta función debe sumar los últimos m números del 
 arreglo a y almacena el resultado en *suma.
 Utilice la función sumaN.
 */
-// ./test.sh  arreglo a es un arreglo de n   *(a+i)=a[i]
 
 void sumaNultimos(int a[], int n, int m, int * suma)
 {
    int entero = sumaN(a,n);
    int diferencia = sumaN(a,n-m);
-   *suma=entero-diferencia;
-}
+   *suma=entero-diferencia; 
+}  // ./test.sh
 
 /*
 Ejercicio 3.
@@ -56,7 +57,11 @@ typedef struct {
 } Persona;
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
-   return NULL;
+   Persona* puntero=(Persona*)malloc(sizeof(Persona));
+   strcpy(puntero->nombre,nombre);
+   strcpy(puntero->rut,rut);
+   puntero->edad=edad;
+   return puntero;
 }
 
 /*
