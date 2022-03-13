@@ -21,23 +21,24 @@ Esta función suma los N primeros números del arreglo a
 int sumaN(int a[], int N) {
     int i;
     int tot = 0;
-
     for(i = 0; i < N; i++) {
       tot += a[i];
     }
-
     return tot;
 }
-
 /*
 Ejercicio 2.
 Esta función debe sumar los últimos m números del 
 arreglo a y almacena el resultado en *suma.
 Utilice la función sumaN.
 */
+// ./test.sh  arreglo a es un arreglo de n   *(a+i)=a[i]
 
-void sumaNultimos(int a[], int n, int m, int * suma) {
-
+void sumaNultimos(int a[], int n, int m, int * suma)
+{
+   int entero = sumaN(a,n);
+   int diferencia = sumaN(a,n-m);
+   *suma=entero-diferencia;
 }
 
 /*
@@ -47,12 +48,12 @@ crearPersona(...), la cual crea una nueva persona con
 los datos correspondientes y retorna un puntero al dato 
 recién creado.
 */
+
 typedef struct {
   char nombre[30];
   char rut[11];
   int edad;
 } Persona;
-
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
    return NULL;
