@@ -40,7 +40,7 @@ void sumaNultimos(int a[], int n, int m, int * suma)
    int entero = sumaN(a,n);
    int diferencia = sumaN(a,n-m);
    *suma=entero-diferencia; 
-} // ./test.sh
+} 
 
 /*
 Ejercicio 3.
@@ -78,8 +78,19 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   Vector* memoria=(Vector*)malloc(sizeof(Vector));
-   //*datos le asigno n
+   Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
+   //el vector es el struct que contiene los datos, asi que debes primer oasignar ememeroia de tamaño vector
+   //al puntero que esta dentro de vector le asginas la memeroia de los datos necesarios
+
+   // ./test.sh
+   memoria->datos=(int *)calloc(n,sizeof(int *));
+   //int largo=5;
+   //int* ptr=calloc(largo,sizeof(int)));
+
+   //memoria->datos=(int *)calloc(n,sizeof(int *));
+   //y esos datos son los que iniciados en 0
+   //y la variable capacidad deberia alamancenar e tamaño de vector
+   memoria->capacidad=n;
    return memoria;
 }
 
