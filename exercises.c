@@ -90,22 +90,15 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 
-/*
-void sumaV(Vector * a, Vector * b, Vector * c) 
-{
-   int i=0;
-   for(i = 0; i < b->capacidad; i++) {
-      c->datos[i] = a->datos[i]+ b->datos[i];
-   }
-}
-*/
-
 // ./test.sh
-//Programe las función void `asignarValor(Vector * v, int i, int valor)`, 
-//la cual asigna `valor` a la posición `i` del vector `v`.
+
 void asignarValor(Vector * v, int i, int valor) {
    //asgina valor->posicion i-> del vector v
-   v->datos[i]=valor;
+   //v->datos[i]=valor;
+   for(i = 0; i < v->capacidad; i++) {
+   
+      v->datos[i]=valor;
+   }
 }
 
 
