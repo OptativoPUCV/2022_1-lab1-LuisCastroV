@@ -79,17 +79,7 @@ typedef struct {
 
 Vector * crearVector(int n) {
    Vector* memoria=(Vector*)calloc(n,sizeof(Vector));
-   //el vector es el struct que contiene los datos, asi que debes primer oasignar ememeroia de tamaño vector
-   //al puntero que esta dentro de vector le asginas la memeroia de los datos necesarios
-
-   // ./test.sh
    memoria->datos=(int *)calloc(n,sizeof(int *));
-   //int largo=5;
-   //int* ptr=calloc(largo,sizeof(int)));
-
-   //memoria->datos=(int *)calloc(n,sizeof(int *));
-   //y esos datos son los que iniciados en 0
-   //y la variable capacidad deberia alamancenar e tamaño de vector
    memoria->capacidad=n;
    return memoria;
 }
@@ -99,8 +89,10 @@ Ejercicio 5a.
 Programe la función void asignarValor(Vector * v, int i, int valor), 
 la cual asigna el valor a la posición i del vector v.
 */
-void asignarValor(Vector * v, int i, int valor) {
 
+// ./test.sh
+
+void asignarValor(Vector * v, int i, int valor) {
 }
 
 /*
@@ -117,8 +109,12 @@ Ejercicio 7.
 Función que suma los vectores `a` y `b` y 
 actualiza el vector `c` con el resultado de la suma.
 */
-void sumaV(Vector * a, Vector * b, Vector * c) {
-
+void sumaV(Vector * a, Vector * b, Vector * c) 
+{
+   int i=0;
+   for(i = 0; i < b->capacidad; i++) {
+      c->datos[i] = a->datos[i]+ b->datos[i];
+   }
 }
 
 /*
