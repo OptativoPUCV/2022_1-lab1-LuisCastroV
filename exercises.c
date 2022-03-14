@@ -93,8 +93,6 @@ la cual asigna el valor a la posición i del vector v.
 // ./test.sh
 
 void asignarValor(Vector * v, int i, int valor) {
-   //asgina valor->posicion i-> del vector v
-   //v->datos[i]=valor;
    for(int x = 0; x <= v->capacidad; x++) {
       if(x==i){
          v->datos[x]=valor;
